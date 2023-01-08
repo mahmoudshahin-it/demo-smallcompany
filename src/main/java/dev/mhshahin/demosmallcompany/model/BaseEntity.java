@@ -1,4 +1,4 @@
-package com.example.demosmallcompany.model;
+package dev.mhshahin.demosmallcompany.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;

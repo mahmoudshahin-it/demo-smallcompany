@@ -1,6 +1,6 @@
-package com.example.demosmallcompany.repository;
+package dev.mhshahin.demosmallcompany.repository;
 
-import com.example.demosmallcompany.model.Departments;
+import dev.mhshahin.demosmallcompany.model.Departments;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
