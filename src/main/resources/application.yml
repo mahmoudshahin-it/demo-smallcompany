@@ -1,8 +1,27 @@
 spring:
+  profiles:
+    active: staging
+  application:
+    name: demo-smallcompany
+  mvc:
+    pathmatch:
+     matching-strategy: ant_path_matcher
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
   datasource:
     url: jdbc:postgresql://localhost:5432/smallcompanydb
     username: postgres
     password: postgres
-  mvc:
-    pathmatch:
-     matching-strategy: ant_path_matcher
+---
+spring:
+  config:
+    activate:
+      on-profile: staging
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smallcompanystagingdb
+    username: postgres
+    password: postgres
