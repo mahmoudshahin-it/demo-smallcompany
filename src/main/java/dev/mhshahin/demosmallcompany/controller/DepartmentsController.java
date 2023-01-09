@@ -2,10 +2,15 @@ package dev.mhshahin.demosmallcompany.controller;
 
 
 import dev.mhshahin.demosmallcompany.dto.requestdto.DepartmentRequestDTO;
+import dev.mhshahin.demosmallcompany.dto.rsponsedto.DepartmentResponseDTO;
 import dev.mhshahin.demosmallcompany.repository.DepartmentsRepo;
 import dev.mhshahin.demosmallcompany.service.DepartmentService;
 import dev.mhshahin.demosmallcompany.utils.APIResponse;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +36,10 @@ public class DepartmentsController {
     }
 
     @GetMapping
+    @ApiOperation(value = "Get all departments")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "API_201", response = DepartmentResponseDTO.class),
+            @ApiResponse(code = 400, message = "API_400", response = APIResponse.class) })
     public ResponseEntity<APIResponse> findAll(){
         return createUnifiedResponse(departmentService.findAll(), HttpStatus.OK, Department_RECORD_RETRIEVED_SUCCESSFULLY);
     }

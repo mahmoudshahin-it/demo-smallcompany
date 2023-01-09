@@ -1,7 +1,7 @@
 package dev.mhshahin.demosmallcompany.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import lombok.Data;
 
 @Entity

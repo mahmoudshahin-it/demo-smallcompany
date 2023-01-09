@@ -3,3 +3,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/smallcompanydb
     username: postgres
     password: postgres
+  mvc:
+    pathmatch:
+     matching-strategy: ant_path_matcher
