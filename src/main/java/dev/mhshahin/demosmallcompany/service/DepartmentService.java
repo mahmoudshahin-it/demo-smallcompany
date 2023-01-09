@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public interface DepartmentService {
 
-    DepartmentResponseDTO save(DepartmentRequestDTO codecsDTO);
+    DepartmentResponseDTO save(DepartmentRequestDTO departmentRequestDTO);
 
     List<DepartmentResponseDTO> findAll();
 
