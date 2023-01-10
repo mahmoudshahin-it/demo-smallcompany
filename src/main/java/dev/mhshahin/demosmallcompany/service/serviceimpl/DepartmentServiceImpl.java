@@ -28,8 +28,11 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public DepartmentResponseDTO save(DepartmentRequestDTO departmentRequestDTO) {
+
         Departments d = converter.convert(departmentRequestDTO, Departments.class);
         // CREATED BY & Updated by need some handling.
+        d.setCreatedBy("Temp_ChangeMeLater");
+        d.setActive(true);
         Departments persisted= repo.save(d);
         return converter.convert(persisted, DepartmentResponseDTO.class);
 

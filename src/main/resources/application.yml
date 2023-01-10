@@ -25,3 +25,4 @@ spring:
     url: jdbc:postgresql://localhost:5432/smallcompanystagingdb
     username: postgres
     password: postgres
+

@@ -14,8 +14,6 @@ import static dev.mhshahin.demosmallcompany.utils.Constants.DTO_DATE_TIME_FORMAT
 public class BaseResponseDTO {
     private UUID id;
 
-    protected Integer version;
-
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DTO_DATE_TIME_FORMAT)
     private LocalDateTime createTime;
 

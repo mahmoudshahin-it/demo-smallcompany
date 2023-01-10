@@ -11,8 +11,7 @@ import java.util.stream.Collectors;
 public class Converter {
 
     private final ModelMapper modelMapper;
-
-    public Converter() {
+    public Converter(){
         modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 

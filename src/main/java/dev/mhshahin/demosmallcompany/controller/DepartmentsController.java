@@ -43,4 +43,6 @@ public class DepartmentsController {
     public ResponseEntity<APIResponse> findAll(){
         return createUnifiedResponse(departmentService.findAll(), HttpStatus.OK, Department_RECORD_RETRIEVED_SUCCESSFULLY);
     }
+
+
 }
